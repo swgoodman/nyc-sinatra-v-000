@@ -1,4 +1,11 @@
-<form method="POST" action="/figures/:id">
+<h1>Figures</h1>
 
 
-</form>
+<ul>
+  <% Figure.all.each do |figure| %>
+    <li><a href="/figures/<%= figure.id %>"><%= figure.name %></a></li>
+  <% end %>
+</ul>
+
+<a href="/figures/new">Create new figure</a><br>
+<a href="/landmarks">Go to landmarks</a>
