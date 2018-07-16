@@ -13,9 +13,13 @@ class FiguresController < ApplicationController
     if !params[:landmark][:name].empty?
       @figure.landmarks << Landmark.new(name: params[:landmark][:name], year_completed: params[:landmark][:year])
     end
-    
+
     @figure.save
 
     redirect to "/figures/#{@figure.id}"
+    end
+
+    get '/figures' do
+      erb :'figures/index'
     end
 end
