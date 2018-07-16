@@ -1,0 +1,1 @@
+class FiguresController < Sinatra::Base
