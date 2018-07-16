@@ -1,7 +1,6 @@
 class FiguresController < Sinatra::Base
 
-  get '/figures/new' do
-    erb :'/figures/new'
-  end
-
+    get '/figures/new' do
+      erb :'/figures/new'
+    end
 end
