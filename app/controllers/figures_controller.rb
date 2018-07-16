@@ -6,7 +6,7 @@ class FiguresController < ApplicationController
 
     post '/figures' do
       @figure = Figure.new(params[:figure])
-     if !params[:title][:name].empty?
+    if !params[:title][:name].empty?
       @figure.titles << Title.new(name: params[:title][:name])
     end
 
